@@ -6,6 +6,12 @@
 	<script type="text/javascript">
 	$(document).ready( function()
 	{
+		$('a.intercept[href]').click(function(event)
+	{
+		event.preventDefault();
+		
+		return false;
+	});
 	window.setInterval(function()
 	{
 	$( "#cover" ).animate({
@@ -32,10 +38,7 @@
 	</script>
 	</head>
 	<body>
-		<div id="cover">
-		</div>
-		<div id="coverb">
-		</div>
+	
 		<div id="header">
 			<h1>Limpeza Cristalina</h1>
 			<h2>A nossa empresa pela sua limpeza.</h2>
@@ -43,10 +46,10 @@
 		<div id= "links">
 			<table>
 			<tr>
-				<td><a href='index.html'>PÁGINA PRINCIPAL</a></td>
-				<td><a href='about.html'>SOBRE A EMPRESA</a></td>
-				<td><a href='reviews.html'>REFERÊNCIAS</a></td>
-				<td><a href='contactus.html'>CONTACTE-NOS</a></td>
+				<td><a href='index.html' class='intercept'>PÁGINA PRINCIPAL</a></td>
+				<td><a href='about.html' class='intercept'>SOBRE A EMPRESA</a></td>
+				<td><a href='reviews.html' class='intercept'>REFERÊNCIAS</a></td>
+				<td><a href='contactus.html' class='intercept'>CONTACTE-NOS</a></td>
 			</tr>
 			</table>
 		</div>
