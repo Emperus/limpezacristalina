@@ -1,0 +1,94 @@
+html, body
+{
+margin: 0;
+padding: 0;
+}
+
+body
+{
+background-image: url('../images/bg.jpg');
+background-size:cover;
+background-position: 0 -150px;
+}
+
+#cover, #coverb
+{
+	position:absolute;
+	width:100%;
+	height:100%;
+	background-color:rgb(0,0,0);
+}
+#cover
+{
+	background-image: url('../images/dirtyhouse.jpg');
+	background-size:cover;
+}
+#coverb
+{
+	background-image: url('../images/sparkle2.jpg');
+		background-size:cover;
+	left:-500px;
+	opacity:0;
+}
+
+#header
+{
+width:100%;
+padding:1em 0;
+background-color:rgba(161,226,255,0.7);
+margin-bottom: 20px;
+color:white;
+
+}
+#header h1
+{
+}
+#header h1, #header h2, #content, #footer, #links
+{
+	margin: 0 auto;
+	width: 980px
+}
+
+#links
+{
+}
+
+#links table
+{
+width:100%;
+margin-bottom:20px;
+}
+#links td
+{
+
+	text-align:center;
+	padding: 10px;
+}
+
+#links a
+{
+	text-decoration: none;
+	color: rgb(230,230,230); 
+	border: 2px solid rgba(0,0,0,0);
+	border-radius: 15px;
+	font-size:20px;
+	padding: 10px;
+	background-color:#79AED3;
+	font-family:"Verdana";
+	letter-spacing: 0px;
+	font-weight:700;
+	-webkit-transition: border-radius 10s;
+	transition: background-color 0.5s;
+	box-shadow: 10px 10px 20px rgba(0,0,0,1);
+}
+#links a:hover
+{
+	background-color:#4E91BF;
+	border: 2px solid #79AED3;
+
+}
+
+#content
+{
+	background-color: rgb(131,196,225);
+}

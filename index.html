@@ -1,0 +1,60 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/skrollr.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready( function()
+{
+window.setInterval(function()
+{
+$( "#cover" ).animate({
+    opacity: 0,
+  }, 3000, function() {
+    $("#cover").remove()
+  });
+$("#coverb").animate({
+	opacity: 0.5,
+	left: "0px",
+	}, 1000, function()
+	{
+		$("#coverb").animate({
+		opacity: 0,
+		left: "200px",
+		}, 1000, function()
+		{
+			$("#coverb").remove()
+		});
+	});
+},1000);
+});
+
+</script>
+</head>
+<body>
+<div id="cover">
+</div>
+<div id="coverb">
+</div>
+<div id="header">
+<h1>Limpeza Cristalina</h1>
+<h2>A nossa empresa pela sua limpeza.</h2>
+</div>
+<div id= "links">
+<table>
+<tr>
+<td><a href='index.html'>PÁGINA PRINCIPAL</a></td>
+<td><a href='about.html'>SOBRE A EMPRESA</a></td>
+<td><a href='reviews.html'>REFERÊNCIAS</a></td>
+<td><a href='contactus.html'>CONTACTE-NOS</a></td>
+</tr>
+</table>
+</div>
+<div id="content">
+<a> such content, wow</a>
+</div>
+<div id="footer">
+<a> much copyright, wow </a>
+</div>
+</body>
+</html>
