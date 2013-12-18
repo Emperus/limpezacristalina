@@ -9,6 +9,7 @@ body
 background-image: url('../images/bg.jpg');
 background-size:cover;
 background-position: 0 -150px;
+	font-family:"Verdana";
 }
 
 #cover, #coverb
@@ -17,6 +18,7 @@ background-position: 0 -150px;
 	width:100%;
 	height:100%;
 	background-color:rgb(0,0,0);
+	z-index:100;
 }
 #cover
 {
@@ -26,7 +28,7 @@ background-position: 0 -150px;
 #coverb
 {
 	background-image: url('../images/sparkle2.jpg');
-		background-size:cover;
+	background-size:cover;
 	left:-500px;
 	opacity:0;
 }
@@ -74,7 +76,6 @@ margin-bottom:20px;
 	font-size:20px;
 	padding: 10px;
 	background-color:#79AED3;
-	font-family:"Verdana";
 	letter-spacing: 0px;
 	font-weight:700;
 	-webkit-transition: border-radius 10s;
@@ -85,10 +86,25 @@ margin-bottom:20px;
 {
 	background-color:#4E91BF;
 	border: 2px solid #79AED3;
-
 }
 
 #content
 {
-	background-color: rgb(131,196,225);
+	background-color: rgba(131,196,225,0.7);
+	z-index:1;
+}
+
+#content span
+{
+	font-size:18px
+}
+
+#footer
+{
+	text-align:center;
+}
+
+#footer a
+{
+
 }
