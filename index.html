@@ -4,41 +4,7 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/skrollr.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript">
-	$(document).ready( function()
-	{
-		$('a.intercept[href]').click(function(event)
-		{
-			$('#content').load($(this).attr('href'))
-			alert($(this).attr('href'));
-			event.preventDefault();
-			return false;
-		});
-		
-		window.setInterval(function()
-		{
-		$( "#cover" ).animate({
-			opacity: 0,
-			}, 3000, function() {
-			$("#cover").remove()
-		});
-		
-		$("#coverb").animate({
-			opacity: 0.5,
-			left: "0px",
-			}, 1000, function()
-			{
-				$("#coverb").animate({
-				opacity: 0,
-				left: "200px",
-				}, 1000, function()
-				{
-					$("#coverb").remove()
-				});
-			});
-		},1000);
-	});
-	</script>
+	<script type="text/javascript" src="js/paging.js"></script>
 	</head>
 	<body>
 	
@@ -57,7 +23,7 @@
 			</table>
 		</div>
 		<div id="content">
-		<span>
+		<span class="text">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non dictum urna, eu vestibulum dui. Donec ac justo nec massa convallis commodo in dignissim massa. Donec ac mauris congue, aliquet erat vel, dapibus diam. Aenean vehicula nec dui eu mollis. Praesent nec consectetur nisi, sit amet semper eros. Phasellus euismod a eros non dapibus. Integer eleifend in orci ac aliquam. Suspendisse pharetra enim vitae eros vulputate, ut facilisis est consectetur. Nulla ac dictum justo. Duis eu posuere eros. Vestibulum dapibus dui ut lectus pellentesque, at porta enim viverra. Nam sapien dolor, mattis aliquam vestibulum vel, faucibus id nisl.<p>
 
 			Fusce eget nibh vitae neque porta eleifend. Integer aliquam sapien metus, pretium mattis arcu blandit interdum. Etiam vel urna est. Morbi vitae turpis risus. Donec erat enim, adipiscing in leo eu, dignissim fermentum nisl. Praesent consequat dolor sit amet erat accumsan, vitae dictum turpis dignissim. Sed nisi nisi, convallis eu mauris vitae, malesuada pellentesque diam. Donec vel nisi consectetur arcu semper semper. Vestibulum ac gravida nulla. Nullam ut turpis sit amet quam dignissim dictum eu molestie tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque tincidunt nulla vitae malesuada congue. Phasellus interdum posuere magna, sed tincidunt tellus pellentesque non.<p>

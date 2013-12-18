@@ -95,12 +95,13 @@ margin-bottom:20px;
 	z-index:1;
 	padding:10px;
 	margin-bottom:30px;
+	color: rgb(255,255,255);
 }
 
 #content span
 {
 	font-size:18px;
-	color: rgb(255,255,255);
+
 }
 
 #footer
