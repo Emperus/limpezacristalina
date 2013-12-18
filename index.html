@@ -1,5 +1,6 @@
 <html>
 	<head>
+	<title>Página Principal</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<script type="text/javascript" src="js/skrollr.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
@@ -7,34 +8,35 @@
 	$(document).ready( function()
 	{
 		$('a.intercept[href]').click(function(event)
-	{
-		event.preventDefault();
-		
-		return false;
-	});
-	window.setInterval(function()
-	{
-	$( "#cover" ).animate({
-		opacity: 0,
-	  }, 3000, function() {
-		$("#cover").remove()
-	  });
-	$("#coverb").animate({
-		opacity: 0.5,
-		left: "0px",
-		}, 1000, function()
 		{
-			$("#coverb").animate({
+			alert($(this).attr('href'));
+			event.preventDefault();
+			return false;
+		});
+		
+		window.setInterval(function()
+		{
+		$( "#cover" ).animate({
 			opacity: 0,
-			left: "200px",
+			}, 3000, function() {
+			$("#cover").remove()
+		});
+		
+		$("#coverb").animate({
+			opacity: 0.5,
+			left: "0px",
 			}, 1000, function()
 			{
-				$("#coverb").remove()
+				$("#coverb").animate({
+				opacity: 0,
+				left: "200px",
+				}, 1000, function()
+				{
+					$("#coverb").remove()
+				});
 			});
-		});
-	},1000);
+		},1000);
 	});
-
 	</script>
 	</head>
 	<body>
