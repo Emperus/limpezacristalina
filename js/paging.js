@@ -1,21 +1,45 @@
 $(document).ready( function()
 	{
+		window.addEventListener("popstate", function(e) {
+			if(e.state)
+			{
+				$( "#content" ).animate({
+				opacity: 0,
+				width: "950px",
+				}, 750, function() {
+					$('#content').load(window.location.pathname+" .text",function()
+					{
+						$( "#content" ).animate({
+						opacity: 1,
+						width: "980px"
+						}, 750);
+					})
+				});
+			}
+			else
+			{
+				window.history.pushState(true, null, window.location.pathname);
+			}
+		});
 		$('a.intercept[href]').click(function(event)
 		{
 			var link= $(this).attr('href');
-			$( "#content" ).animate({
-			opacity: 0,
-			width: "950px",
-			}, 750, function() {
-				$('#content').load(link+" .text",function()
-				{
-					$( "#content" ).animate({
-					opacity: 1,
-					width: "980px"
-					}, 750);
-					history.pushState(null, null, link);
-				})
-			});
+			if(window.location.pathname.indexOf(link) == -1)
+			{
+				$( "#content" ).animate({
+				opacity: 0,
+				width: "950px",
+				}, 750, function() {
+					$('#content').load(link+" .text",function()
+					{
+						$( "#content" ).animate({
+						opacity: 1,
+						width: "980px"
+						}, 750);
+						window.history.pushState(true, null, link);
+					})
+				});
+			}
 			event.preventDefault();
 			return false;
 		});
